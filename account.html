@@ -146,7 +146,7 @@
         <!-- Initialize laplanteitshop Zendesk Widget script -->
         <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=5cdaa603-7ed5-4afb-8172-ef2c6c6dc372"></script>
         <!-- Authenticate User since already logged in to website -->
-        <script>
+        <script type="module"> //Had to 'npm install jsonwebtoken' in the repository for this to work
             import jwt from 'jsonwebtoken';
             var payload = {
                 name: 'John Smith',
