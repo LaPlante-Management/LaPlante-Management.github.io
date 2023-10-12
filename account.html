@@ -143,9 +143,10 @@
             });
         </script>
 
-        <!-- Start of laplanteitshop Zendesk Widget script -->
+        <!-- Initialize laplanteitshop Zendesk Widget script -->
         <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=5cdaa603-7ed5-4afb-8172-ef2c6c6dc372"></script>
-        <script>
+        <!-- Authenticate User since already logged in to website -->
+        <script type="module">
             /*zE("messenger", "loginUser", function (callback) { //https://developer.zendesk.com/api-reference/widget-messaging/web/authentication/#login
                 callback("new-jwt-for-user")
             })*/
@@ -158,7 +159,9 @@
                 //external_id: '#{customerIdentifier}'
             };
             var token = jwt.sign(payload, 'D8ySer-Xf-M5QNPUlu9iXA-l6ikI20hc5MrCw5GFpSPQx2G64AQFQol7epuFjfaptSZ8clRkw6AeoB8PaN7YDg'); //JWT Secret
-
+        </script>
+        <!-- Set the value of fields relevant to the bot that are known in the user's website profile -->
+        <script>
             zE('messenger:set', 'conversationFields', { id: "19980952032148", value: "2050714543" }); //Set the value of the "Order Number" text field
         </script>
         <!-- End of laplanteitshop Zendesk Widget script -->
