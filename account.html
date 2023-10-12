@@ -1,102 +1,147 @@
-<!DOCTYPE html><html data-bs-theme="light" lang="en" style="height: 604px;"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><title>Home - Brand</title><link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic&amp;display=swap"><link rel="stylesheet" href="assets/css/styles.min.css"></head><body><nav class="navbar navbar-expand bg-light navigation-clean navbar-light" style="padding-left: 79px;padding-right: 0px;padding-bottom: 0px;margin-bottom: -254px;width: 1007px;"><div class="container"><a class="navbar-brand" href="account.html">Demo Company Website</a><button class="navbar-toggler" data-bs-toggle="collapse"></button></div></nav><section class="text-center bg-light features-icons" style="height: 261.594px;padding: 24px 0px;background: var(--bs-body-bg);border-color: var(--bs-body-bg);"></section><div class="container" style="margin-right: 44px;"><section class="position-relative py-4 py-xl-5" style="margin-left: 52px;padding-left: 16px;padding-top: 0px;margin-top: -26px;"><div class="container position-relative"><div class="row d-flex justify-content-center"><div data-reflow-type="user-settings">
-    <div class="ref-auth-settings-signed" style="display: block;">
-        <form class="ref-settings">
-            <div>
-                <h4>User Settings</h4>
-            </div>
-            <div class="ref-profile-photo-container">
-                <img class="ref-profile-photo" src="https://api.reflowhq.com/img/gravatar/default.png" style="width: 150px; height: 150px; display: block; margin: 0 auto;" />
-            </div>
-            <div class="ref-setting ref-setting-photo">
-                <label>
-                    <div class="ref-change-photo">Change Photo</div>
-                    <input class="ref-photo-input" type="file" name="ref-profile-photo" accept="image/*" />
-                </label>
-            </div>
-            <div class="ref-setting">
-                <label>
-                    <div><br><b>Name</b></div>
-                    <input class="ref-form-control" type="text" name="ref-profile-name" minlength="5" required />
-                </label>
-            </div>
-            <div class="ref-setting">
-                <label>
-                    <div><b>Email</b></div>
-                    <input class="ref-form-control" type="email" name="ref-profile-email" required />
-                </label>
-            </div>
-            <div class="ref-setting">
-                <label>
-                    <div><b>Phone</b></div>
-                    <input class="ref-form-control" type="phone" name="ref-profile-phone" pattern="[0-9\+\- ]{5,30}" />
-                </label>
-            </div>
-            <div class="ref-setting ref-address-settings">
-                <div><b>Shipping Address</b></div>
-                <div class="ref-address-holder">
-                    <div class="ref-address-widget">
-                        <label><span></span>
-                            <textarea class="ref-form-control ref-field-details-address-line" rows="2" name="shipping-address" data-state-src="shipping-address" minlength="5"></textarea>
-                            <div class="ref-validation-error"></div>
-                        </label>
+<!DOCTYPE html><html data-bs-theme="light" lang="en" style="height: 604px;">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Home - Brand</title>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic&amp;display=swap">
+        <link rel="stylesheet" href="assets/css/styles.min.css">
+        <style>
+            .ref-orders-table {
+                text-align: center;
+            }
+            .ref-orders-table table {
+                border: 1px solid #000; /* Add a border around the table */
+                width: 100%; /* Make the table fill its container */
+            }
+            .ref-orders-table th, .ref-orders-table td {
+                padding: 10px;
+                border: 1px solid #000; /* Add borders to table cells */
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand bg-light navigation-clean navbar-light" style="padding-left: 79px;padding-right: 0px;padding-bottom: 0px;margin-bottom: -254px;width: 1007px;"><div class="container"><a class="navbar-brand" href="account.html">Demo Company Website</a><button class="navbar-toggler" data-bs-toggle="collapse"></button></div></nav>
+        <section class="text-center bg-light features-icons" style="height: 261.594px; padding: 24px 0;"></section>
+    <!-- User Details -->
+    <div class="container" style="margin-left: 120px;">
+        <section class="position-relative py-4 py-xl-5">
+            <div class="container position-relative">
+                <div class="row">
+                    <div data-reflow-type="user-settings">
+                        <div class="ref-auth-settings-signed">
+                            <form class="ref-settings">
+                                <div>
+                                    <h4>User Settings</h4>
+                                </div>
+                                <div class="ref-profile-photo-container">
+                                    <img class="ref-profile-photo" src="https://api.reflowhq.com/img/gravatar/default.png" alt="User Profile Photo" width="150" height="150">
+                                </div>
+                                <div class="ref-setting ref-setting-photo">
+                                    <label>
+                                        <div class="ref-change-photo">Change Photo</div>
+                                        <input class="ref-photo-input" type="file" name="ref-profile-photo" accept="image/*" />
+                                    </label>
+                                </div>
+                                <div class="ref-setting">
+                                    <label>
+                                        <div><br><b>Name</b></div>
+                                        <input class="ref-form-control" type="text" name="ref-profile-name" minlength="5" required />
+                                    </label>
+                                </div>
+                                <div class="ref-setting">
+                                    <label>
+                                        <div><b>Email</b></div>
+                                        <input class="ref-form-control" type="email" name="ref-profile-email" required />
+                                    </label>
+                                </div>
+                                <div class="ref-setting">
+                                    <label>
+                                        <div><b>Phone</b></div>
+                                        <input class="ref-form-control" type="tel" name="ref-profile-phone" pattern="[0-9\+\- ]{5,30}" />
+                                    </label>
+                                </div>
+                                <div class="ref-setting ref-address-settings">
+                                    <div><b>Shipping Address</b></div>
+                                    <div class="ref-address-holder">
+                                        <div class="ref-address-widget">
+                                            <label><span></span>
+                                                <textarea class="ref-form-control ref-field-details-address-line" rows="2" name="shipping-address" data-state-src="shipping-address" minlength="5"></textarea>
+                                                <div class="ref-validation-error"></div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="ref-button ref-submit" type="button">Save</button><br>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="ref-button ref-submit" type="button">Save</div>
-        </form>
+        </section>
     </div>
-</div></div></div></section></div><div class="container" style="margin-right: 44px;"><div data-reflow-type="user-orders" style="padding-left: 79px;">
-    <div class="reflow-user-orders">
-        <div class="ref-auth-orders-signed" style="display: block;">
-            <div class="ref-orders">
-                <div class="ref-orders-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <td>Order</td>
-                                <td>Date</td>
-                                <td>Status</td>
-                                <td>Products</td>
-                                <td>Total</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>#2050714543</td>
-                                <td>9/4/2023, 3:46:38 AM</td>
-                                <td>Returned</td>
-                                <td>2</td>
-                                <td>$577.54</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-</div></div><div class="bg-body shadow d-flex flex-column flex-shrink-0 position-fixed top-0 bottom-0" style="width: 4.5rem;"><a class="text-center link-body-emphasis d-block p-3 text-decoration-none border-bottom" href="/" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-briefcase" style="font-size: 25px;">
-  <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z"></path>
-</svg><span class="visually-hidden">Icon-only</span></a><ul class="nav nav-pills flex-column text-center nav-flush mb-auto"><li class="nav-item"><a class="nav-link active link-light py-3 border-bottom rounded-0" href="#" aria-current="page" style="background: var(--bs-nav-pills-link-active-color);color: var(--bs-nav-pills-link-active-bg);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-house-door" style="color: var(--bs-nav-pills-link-active-bg);">
-  <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"></path>
-</svg></a></li><li class="nav-item"><a class="nav-link py-3 border-bottom rounded-0" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-calendar-plus">
-  <path d="M8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z"></path>
-  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"></path>
-</svg></a></li><li class="nav-item"><a class="nav-link py-3 border-bottom rounded-0" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bar-chart">
-  <path d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5v12h-2V2h2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z"></path>
-</svg></a></li><li class="nav-item"><a class="nav-link py-3 border-bottom rounded-0" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-chat-right-dots">
-  <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"></path>
-  <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
-</svg></a></li><li class="nav-item"><a class="nav-link py-3 border-bottom rounded-0" href="#" style="background: #007bff;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-people" style="color: var(--bs-nav-pills-link-active-color);">
-  <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"></path>
-</svg></a></li></ul><div class="dropdown p-3 border-top"><a class="dropdown-toggle link-body-emphasis d-flex align-items-center text-decoration-none" aria-expanded="false" data-bs-toggle="dropdown" role="button"><img class="rounded-circle" alt="" width="32" height="32" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" style="object-fit: cover;"></a><div class="dropdown-menu shadow text-small" data-popper-placement="top-start"><a class="dropdown-item" href="#">New project...</a><a class="dropdown-item" href="#">Settings</a><a class="dropdown-item" href="account.html">Profile</a><div class="dropdown-divider"></div><a class="dropdown-item" href="index.html">Sign out</a></div></div></div><script>
-    // Wait for the document to be ready
-    document.addEventListener("DOMContentLoaded", function() {
-        // Find the name and email input fields
-        var nameInput = document.querySelector('input[name="ref-profile-name"]');
-        var emailInput = document.querySelector('input[name="ref-profile-email"]');
         
-        // Set the default values
-        nameInput.value = "John Smith";
-        emailInput.value = "johns@gmail.com";
-    });
-</script><script src="assets/bootstrap/js/bootstrap.min.js"></script><script src="assets/js/script.min.js"></script></body></html>
+        <!--User Order History-->
+        <div class="container" style="margin-left: 120px;">
+            <div class="reflow-user-orders">
+                <div class="ref-auth-orders-signed" style="display: block;">
+                    <div class="ref-orders">
+                        <div class="ref-orders-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Order</td>
+                                        <td>Date</td>
+                                        <td>Status</td>
+                                        <td>Products</td>
+                                        <td>Total</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#2050714543</td>
+                                        <td>9/4/2023, 9:46 AM</td>
+                                        <td>Delivered</td>
+                                        <td>2</td>
+                                        <td>$577.54</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div></div>
+
+        <!--Sidebar-->
+        </div><div class="bg-body shadow d-flex flex-column flex-shrink-0 position-fixed top-0 bottom-0" style="width: 4.5rem;"><a class="text-center link-body-emphasis d-block p-3 text-decoration-none border-bottom" href="/" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-briefcase" style="font-size: 25px;">
+        <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z"></path>
+        </svg><span class="visually-hidden">Icon-only</span></a><ul class="nav nav-pills flex-column text-center nav-flush mb-auto"><li class="nav-item"><a class="nav-link active link-light py-3 border-bottom rounded-0" href="#" aria-current="page" style="background: var(--bs-nav-pills-link-active-color);color: var(--bs-nav-pills-link-active-bg);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-house-door" style="color: var(--bs-nav-pills-link-active-bg);">
+        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"></path>
+        </svg></a></li><li class="nav-item"><a class="nav-link py-3 border-bottom rounded-0" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-calendar-plus">
+        <path d="M8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z"></path>
+        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"></path>
+        </svg></a></li><li class="nav-item"><a class="nav-link py-3 border-bottom rounded-0" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bar-chart">
+        <path d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5v12h-2V2h2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z"></path>
+        </svg></a></li><li class="nav-item"><a class="nav-link py-3 border-bottom rounded-0" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-chat-right-dots">
+        <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"></path>
+        <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+        </svg></a></li><li class="nav-item"><a class="nav-link py-3 border-bottom rounded-0" href="#" style="background: #007bff;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-people" style="color: var(--bs-nav-pills-link-active-color);">
+        <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"></path>
+        </svg></a></li></ul><div class="dropdown p-3 border-top"><a class="dropdown-toggle link-body-emphasis d-flex align-items-center text-decoration-none" aria-expanded="false" data-bs-toggle="dropdown" role="button"><img class="rounded-circle" alt="" width="32" height="32" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" style="object-fit: cover;"></a><div class="dropdown-menu shadow text-small" data-popper-placement="top-start"><a class="dropdown-item" href="#">New project...</a><a class="dropdown-item" href="#">Settings</a><a class="dropdown-item" href="account.html">Profile</a><div class="dropdown-divider"></div><a class="dropdown-item" href="index.html">Sign out</a></div></div></div>
+        
+        <script>//Prefill "John Smith" and "jsmith@gmail.com"
+            // Wait for the document to be ready
+            document.addEventListener("DOMContentLoaded", function() {
+                // Find the name and email input fields
+                var nameInput = document.querySelector('input[name="ref-profile-name"]');
+                var emailInput = document.querySelector('input[name="ref-profile-email"]');
+                
+                // Set the default values
+                nameInput.value = "John Smith";
+                emailInput.value = "jsmith@gmail.com";
+            });
+        </script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/script.min.js"></script>
+    </body>
+</html>
