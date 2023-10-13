@@ -1,5 +1,5 @@
 //import { createToken } from "./jwtHandler";
-const { createToken } = require("./jwtHandler");
+const { createToken } = require("./jwtHandler.mjs");
 
 if (window.innerWidth < 768) {
     const elements = Array.from(document.querySelectorAll("[data-bss-disabled-mobile]"));
