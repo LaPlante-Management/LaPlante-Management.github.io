@@ -145,8 +145,10 @@
 
         <!-- Initialize laplanteitshop Zendesk Widget script -->
         <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=5cdaa603-7ed5-4afb-8172-ef2c6c6dc372">
+            console.log("RUNNING THE INITIALIZE WIDGET SCRIPT");
             //Set the value of fields relevant to the bot that are known in the user's website profile
             zE('messenger:set', 'conversationFields', { id: "19980952032148", value: "2050714543" }); //Set the value of the "Order Number" text field
+            console.log("Order Number should be set");
         </script>
         <!-- Authenticate User since already logged in to website
         <script type="module"> //Had to 'npm install jose' in the repository for this to work (https://jwt.io/libraries?language=JavaScript)
@@ -160,19 +162,23 @@
             var token = jose.sign(payload, 'D8ySer-Xf-M5QNPUlu9iXA-l6ikI20hc5MrCw5GFpSPQx2G64AQFQol7epuFjfaptSZ8clRkw6AeoB8PaN7YDg'); //JWT Secret
         </script> -->
         <!--Authenticate User since already logged in to website-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jsonwebtoken/8.5.1/jsonwebtoken.min.js"></script>
         <script>
-            const jwt = require('jsonwebtoken');
-            const user = {
+            const payload = {
                 name: 'John Smith',
                 email: 'jsmith@gmail.com',
             };
-            const token = jwt.sign(user, 'D8ySer-Xf-M5QNPUlu9iXA-l6ikI20hc5MrCw5GFpSPQx2G64AQFQol7epuFjfaptSZ8clRkw6AeoB8PaN7YDg', { expiresIn: '1h' });
+            const secretKey = 'D8ySer-Xf-M5QNPUlu9iXA-l6ikI20hc5MrCw5GFpSPQx2G64AQFQol7epuFjfaptSZ8clRkw6AeoB8PaN7YDg';
+            const token = jwt.sign(payload, secretKey);
+            // Print the token to the console (for testing)
+            console.log(token);
 
+            // Login User ()
             zE("messenger", "loginUser", function (callback) {
                 callback(token);
             });
-
         </script>
+
         <!-- End of laplanteitshop Zendesk Widget script -->
 
 
