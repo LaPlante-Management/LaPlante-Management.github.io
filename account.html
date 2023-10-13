@@ -147,18 +147,18 @@
         <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=5cdaa603-7ed5-4afb-8172-ef2c6c6dc372">
             zE('messenger:set', 'conversationFields', { id: "19980952032148", value: "2050714543" }); //Set the value of the "Order Number" text field
         </script>
-        <!-- Authenticate User since already logged in to website 
-        <script type="module"> //Had to 'npm install jsonwebtoken' in the repository for this to work
-            import jwt;
+        <!-- Authenticate User since already logged in to website -->
+        <script type="module"> //Had to 'npm install jose' in the repository for this to work (https://jwt.io/libraries?language=JavaScript)
+            import * as jose from 'jose';
             var payload = {
                 name: 'John Smith',
                 email: 'jsmith@gmail.com',
                 //exp: #{timestamp},
                 //external_id: '#{customerIdentifier}'
             };
-            var token = jwt.sign(payload, 'D8ySer-Xf-M5QNPUlu9iXA-l6ikI20hc5MrCw5GFpSPQx2G64AQFQol7epuFjfaptSZ8clRkw6AeoB8PaN7YDg'); //JWT Secret
-        </script>-->
-        <!-- Set the value of fields relevant to the bot that are known in the user's website profile -->
+            var token = jose.sign(payload, 'D8ySer-Xf-M5QNPUlu9iXA-l6ikI20hc5MrCw5GFpSPQx2G64AQFQol7epuFjfaptSZ8clRkw6AeoB8PaN7YDg'); //JWT Secret
+        </script>
+        <!--Set the value of fields relevant to the bot that are known in the user's website profile-->
         <script>
             //zE('messenger:set', 'conversationFields', { id: "19980952032148", value: "2050714543" }); //Set the value of the "Order Number" text field
         </script>
