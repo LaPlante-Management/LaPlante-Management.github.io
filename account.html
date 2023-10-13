@@ -162,24 +162,29 @@
             var token = jose.sign(payload, 'D8ySer-Xf-M5QNPUlu9iXA-l6ikI20hc5MrCw5GFpSPQx2G64AQFQol7epuFjfaptSZ8clRkw6AeoB8PaN7YDg'); //JWT Secret
         </script> -->
         <!--Authenticate User since already logged in to website-->
-        <!-- Include the jsonwebtoken library -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jsonwebtoken/9.0.2/index.js" integrity="sha512-RXL0bGpRhGqIgv9FZ4AneJDhu45H8APjVTTUhRlEHaFkooaz1PNor74q2OB/jmq/XunG3qwZB1jaAHNZ1O9niA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script>
-            const jwt = require('jsonwebtoken');
-            const payload = {
-                name: 'John Smith',
-                email: 'jsmith@gmail.com',
-            };
-            const secretKey = 'D8ySer-Xf-M5QNPUlu9iXA-l6ikI20hc5MrCw5GFpSPQx2G64AQFQol7epuFjfaptSZ8clRkw6AeoB8PaN7YDg';
-            const token = jwt.sign(payload, secretKey);
-            
-            // Print the token to the console (for testing)
-            console.log(token);
+            // Add a callback function to ensure the jwt library is loaded
+            function createToken() {
+                // You can now use the 'jwt' object
+                const payload = {
+                    name: 'John Smith',
+                    email: 'jsmith@gmail.com',
+                };
+                const secretKey = 'D8ySer-Xf-M5QNPUlu9iXA-l6ikI20hc5MrCw5GFpSPQx2G64AQFQol7epuFjfaptSZ8clRkw6AeoB8PaN7YDg';
+                const token = jwt.sign(payload, secretKey);
 
-            // Login User ()
-            zE("messenger", "loginUser", function (callback) {
-                callback(token);
-            });
+                // Print the token to the console (for testing)
+                console.log(token);
+
+                // Login User ()
+                zE("messenger", "loginUser", function (callback) {
+                    callback(token);
+                });
+            }
+
+            // Call the createToken function once the script is loaded
+            window.addEventListener("load", createToken);
         </script>
 
         <!-- End of laplanteitshop Zendesk Widget script -->
