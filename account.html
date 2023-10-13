@@ -162,18 +162,18 @@
             var token = jose.sign(payload, 'D8ySer-Xf-M5QNPUlu9iXA-l6ikI20hc5MrCw5GFpSPQx2G64AQFQol7epuFjfaptSZ8clRkw6AeoB8PaN7YDg'); //JWT Secret
         </script> -->
         <!--Authenticate User since already logged in to website-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jsonwebtoken/9.0.2/index.min.js" integrity="sha512-8/EvcnltlwioGckI6w08LZYcuCl6p1IQ3vNy5DRduBn3gb4Rq0TkFNWBad4lLHO9MYxPtJyzp3S2vin29nA1Ow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- Include the jose library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jose/4.15.3/index.bundle.min.js" integrity="sha512-K6+jvic+57s8+2Y9B1gCZGTudkVoxczXNYPe3GZvE23uroxzTa5wZ7ZegUeN12P2E6TM3jVmNuzLvocukbibDA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script>
-            // Add a callback function to ensure the jwt library is loaded
+            // Add a callback function to ensure the jose library is loaded
             function createToken() {
-                // You can now use the 'jwt' object
                 const payload = {
                     name: 'John Smith',
                     email: 'jsmith@gmail.com',
                 };
                 const secretKey = 'D8ySer-Xf-M5QNPUlu9iXA-l6ikI20hc5MrCw5GFpSPQx2G64AQFQol7epuFjfaptSZ8clRkw6AeoB8PaN7YDg';
-                const token = jwt.sign(payload, secretKey);
-
+                const token = Jose.JWT.sign(payload, secretKey);
+                
                 // Print the token to the console (for testing)
                 console.log(token);
 
@@ -186,6 +186,7 @@
             // Call the createToken function once the script is loaded
             window.addEventListener("load", createToken);
         </script>
+
 
         <!-- End of laplanteitshop Zendesk Widget script -->
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
