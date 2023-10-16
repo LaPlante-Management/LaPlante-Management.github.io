@@ -18,7 +18,8 @@ zE("messenger", "loginUser", function (callback) {
     callback(token);
 });
 console.log('User logged in.');*/
-var jwt = require('jsonwebtoken');
+//var jwt = require('jsonwebtoken');
+import jwt from 'jsonwebtoken';
 const SECRET = 'D8ySer-Xf-M5QNPUlu9iXA-l6ikI20hc5MrCw5GFpSPQx2G64AQFQol7epuFjfaptSZ8clRkw6AeoB8PaN7YDg';
 const KEY_ID = 'app_65285e7edb23fcdd066d96bc'
 var token = jwt.sign({ scope: 'user', external_id: 'jsmith@gmail.com' }, SECRET, { header: { kid: KEY_ID } });
