@@ -25,12 +25,4 @@ hoverAnimateElements.forEach((element) => {
     target.classList.remove("animated", target.dataset.bssHoverAnimate);
     });
 });
-//Authenticate the User for Zendesk Widget Purposes
-const token = createToken(); // Call the createToken function from jwtHandler.js
-console.log(token);
-// Login User ()
-zE("messenger", "loginUser", function (callback) {
-    callback(token);
-    console.log("authenticating user")
-});
 });

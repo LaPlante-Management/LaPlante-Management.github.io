@@ -143,14 +143,20 @@
             });
         </script>
 
+        <script src="assets/bootstrap/js/bootstrap.min.js" async></script>
+        <script src="assets/js/script.min.mjs" async></script>
+        <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=5cdaa603-7ed5-4afb-8172-ef2c6c6dc372" defer></script>
+        <script src="jwtHandler.mjs" defer></script>
+
         <!-- Initialize laplanteitshop Zendesk Widget script -->
+        <!--
         <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=5cdaa603-7ed5-4afb-8172-ef2c6c6dc372">
             console.log("RUNNING THE INITIALIZE WIDGET SCRIPT");
             //Set the value of fields relevant to the bot that are known in the user's website profile
             zE('messenger:set', 'conversationFields', { id: "19980952032148", value: "2050714543" }); //Set the value of the "Order Number" text field
             console.log("Order Number should be set");
         </script>
-        <!-- Authenticate User since already logged in to website
+         Authenticate User since already logged in to website
         <script type="module"> //Had to 'npm install jose' in the repository for this to work (https://jwt.io/libraries?language=JavaScript)
             import * as jose from 'jose';
             var payload = {
@@ -186,10 +192,5 @@
             // Call the createToken function once the script is loaded
             window.addEventListener("load", createToken);
         </script> -->
-
-        <!-- End of laplanteitshop Zendesk Widget script -->
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="assets/js/jwtHandler.mjs"></script>
-        <script src="assets/js/script.min.mjs"></script>
     </body>
 </html>
