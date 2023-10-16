@@ -11,6 +11,7 @@ export function createToken() {
     
     return token;
 }*/
+console.log('Parsing authenticate.mjs file)')
 import jwt from 'jsonwebtoken';
 
 const zendeskSigningKey = 'D8ySer-Xf-M5QNPUlu9iXA-l6ikI20hc5MrCw5GFpSPQx2G64AQFQol7epuFjfaptSZ8clRkw6AeoB8PaN7YDg';
