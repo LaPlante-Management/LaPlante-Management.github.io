@@ -1,18 +1,5 @@
-/*import { JWT } from "jose";
-
-export function createToken() {
-    const payload = {
-        name: 'John Smith',
-        email: 'jsmith@gmail.com',
-        external_id: 'jsmith@gmail.com'
-    };
-    const secretKey = 'D8ySer-Xf-M5QNPUlu9iXA-l6ikI20hc5MrCw5GFpSPQx2G64AQFQol7epuFjfaptSZ8clRkw6AeoB8PaN7YDg';
-    const token = JWT.sign(payload, secretKey, { algorithm: 'HS256' });
-    
-    return token;
-}*/
 console.log('Parsing authenticate.mjs file)')
-import jwt from 'jsonwebtoken';
+/*import jwt from 'jsonwebtoken';
 
 const zendeskSigningKey = 'D8ySer-Xf-M5QNPUlu9iXA-l6ikI20hc5MrCw5GFpSPQx2G64AQFQol7epuFjfaptSZ8clRkw6AeoB8PaN7YDg';
 const user = {
@@ -22,7 +9,9 @@ const user = {
 };
 
 const token = jwt.sign(user, zendeskSigningKey, { algorithm: 'HS256' });
-console.log('JWT Token:', token);
+console.log('JWT Token:', token);*/
+
+token = 'D8ySer-Xf-M5QNPUlu9iXA-l6ikI20hc5MrCw5GFpSPQx2G64AQFQol7epuFjfaptSZ8clRkw6AeoB8PaN7YDg'
 
 // Login User ()
 zE("messenger", "loginUser", function (callback) {
