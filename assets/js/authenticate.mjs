@@ -9,7 +9,7 @@ const user = {
 };
 
 const token = jwt.sign(user, zendeskSigningKey, { algorithm: 'HS256' });
-console.log('JWT Token:', token);*/
+console.log('JWT Token:', token);
 
 token = 'D8ySer-Xf-M5QNPUlu9iXA-l6ikI20hc5MrCw5GFpSPQx2G64AQFQol7epuFjfaptSZ8clRkw6AeoB8PaN7YDg'
 
@@ -17,4 +17,7 @@ token = 'D8ySer-Xf-M5QNPUlu9iXA-l6ikI20hc5MrCw5GFpSPQx2G64AQFQol7epuFjfaptSZ8clR
 zE("messenger", "loginUser", function (callback) {
     callback(token);
 });
-console.log('User logged in.');
+console.log('User logged in.');*/
+var jwt = require('jsonwebtoken');
+var token = jwt.sign({ scope: 'user', external_id: '12345678' }, SECRET, { header: { kid: KEY_ID } });
+console.log('Token: ' + String(token))
