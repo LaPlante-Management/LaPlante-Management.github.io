@@ -1,5 +1,6 @@
 console.log('Parsing authenticate.js file)')
-/*import jwt from 'jsonwebtoken';
+/*import { JsonWebTokenError } from "jsonwebtoken";
+import jwt from 'jsonwebtoken';
 
 const zendeskSigningKey = 'D8ySer-Xf-M5QNPUlu9iXA-l6ikI20hc5MrCw5GFpSPQx2G64AQFQol7epuFjfaptSZ8clRkw6AeoB8PaN7YDg';
 const user = {
@@ -13,11 +14,12 @@ console.log('JWT Token:', token);
 
 token = 'D8ySer-Xf-M5QNPUlu9iXA-l6ikI20hc5MrCw5GFpSPQx2G64AQFQol7epuFjfaptSZ8clRkw6AeoB8PaN7YDg'
 
-// Login User ()
+Login User ()
 zE("messenger", "loginUser", function (callback) {
     callback(token);
 });
 console.log('User logged in.');*/
+
 var jwt = require('jsonwebtoken');
 const SECRET = 'D8ySer-Xf-M5QNPUlu9iXA-l6ikI20hc5MrCw5GFpSPQx2G64AQFQol7epuFjfaptSZ8clRkw6AeoB8PaN7YDg';
 const KEY_ID = 'app_65285e7edb23fcdd066d96bc'
